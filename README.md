@@ -31,4 +31,9 @@ npm run test:unit
 ```
 
 ### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+See [Configuration Reference](https://cli.vuejs.org/config/). 
+
+# Spacer app
+
+This app uses NASA image API to fetch images and display them after possing search query.
+`
