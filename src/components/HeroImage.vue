@@ -1,0 +1,36 @@
+<template>
+  <div class="hero-image"></div>
+</template>
+
+<script>
+export default {
+  name: 'HeroImage',
+};
+</script>
+
+<style lang="scss" scoped>
+  .hero-image {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    z-index: -1;
+
+    background-image: url('../assets/heroimage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 80% 0%;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0, .3);
+    }
+  }
+</style>

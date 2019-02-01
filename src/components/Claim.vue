@@ -21,22 +21,43 @@ export default {
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  @import '../scss/variables';
+
   .claim-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    color: white;
   }
 
   .claim {
     font-size: 50px;
     margin: 0;
+    text-transform: uppercase;
+
+    @media (min-width: $screen-sm) {
+      font-size: 80px;
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: 100px;
+      letter-spacing: 4px;
+    }
   }
 
   .subclaim {
-    margin: 15px 0 0 0;
+    margin: 20px 0 0 0;
     font-size: 13px;
+    font-weight: 400;
+
+    @media (min-width: $screen-sm) {
+      width: 500px;
+      font-size: 17px;
+      line-height: 1;
+      letter-spacing: 1px;
+    }
   }
 </style>
