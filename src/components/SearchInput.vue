@@ -2,10 +2,13 @@
   <input
     id="search"
     name="search"
+    :class="{ dark: dark }"
     title="search-input"
     :value="value"
     @input="handleChange"
   />
+
+
 </template>
 
 <script>
@@ -15,6 +18,10 @@ export default {
     value: {
       type: String,
       required: true,
+    },
+    dark: {
+      type: Boolean,
+      default: false,
     },
   },
   methods: {
@@ -26,7 +33,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import '../scss/variables';
+  @import '~@/scss/settings';
 
   input {
     display: flex;
@@ -54,4 +61,14 @@ export default {
       box-shadow: 0 10px 20px -8px rgba(255,255,255, .5);
     }
   }
+
+  .dark {
+    color: #1e3d4a;
+    border-bottom-color: #1e3d4a;
+
+    &:focus {
+      box-shadow: 0 10px 20px -8px rgba(#1e3d4a, .2);
+    }
+  }
+
 </style>
